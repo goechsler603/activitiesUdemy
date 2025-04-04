@@ -1,2 +1,2 @@
 # activitiesUdemy
-The activities proposed in the udemy course
+The activities proposed in the udemy Java course
