@@ -19,7 +19,7 @@ public class Program {
         String name = sc.nextLine();
         System.out.println("Enter your account number:");
         int accountNumber = sc.nextInt();
-        BankAccount account1 = new BankAccount(name, accountNumber);
+        BankAccount account1;
 
         while (true) {
             String answer;
@@ -29,9 +29,10 @@ public class Program {
             if (answer.equals("Y")) {
                 System.out.print("Enter your first deposit amount: ");
                 double firstDeposit = sc.nextDouble();
-                account1.deposit(firstDeposit);
+                account1 =  new BankAccount(name, accountNumber, firstDeposit);
                 break;
             } else if (answer.equals("N")) {
+                account1 = new BankAccount(name, accountNumber);
                 break;
             } else {
                 System.out.println("Invalid input. Please enter 'Y' or 'N'.");

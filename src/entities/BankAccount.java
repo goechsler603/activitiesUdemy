@@ -27,6 +27,12 @@ public class BankAccount {
         this.accountNumber = accountNumber;
     }
 
+    public BankAccount(String accountName, int accountNumber, double initialBalance) {
+        this.accountName = accountName;
+        this.accountNumber = accountNumber;
+        this.accountBalance = initialBalance;
+    }
+
     public void bankDraft (double draft){
         accountBalance = accountBalance - draft - 5;
     }
