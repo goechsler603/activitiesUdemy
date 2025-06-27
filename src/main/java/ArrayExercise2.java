@@ -29,30 +29,41 @@ public class ArrayExercise2 {
             heights[i] = sc.nextDouble();
         }
 
-        double avaregeHeight = 0;
-        double sum = 0;
-        for (int i = 0; i < heights.length; i++) {
-            sum += heights[i];
-            avaregeHeight = sum / heights.length;
-        }
+        System.out.println("Average height: " + averageHeight(heights));
+        System.out.printf("Persons under 16 years old: %.1f%%%n", percent(ages));
 
-        int aux = 0;
-        for (int i = 0; i < ages.length; i++) {
-            if (ages[i] < 16) {
-                aux += 1;
-            }
-        }
-        System.out.println(aux);
+       printNames(ages, names);
+    }
 
-        double percent = (aux * 100)/ ages.length;
+    //Function
 
-        System.out.println("Average height: " + avaregeHeight);
-        System.out.printf("Persons under 16 years old: %.1f%%%n", percent);
-
+    public static void printNames(int[] ages, String names[]) {
         for (int i = 0; i < ages.length; i++) {
             if (ages[i] < 16){
                 System.out.println(names[i]);
             }
         }
     }
+
+    public static double percent(int ages[]) {
+        int aux = 0;
+        for (int i = 0; i < ages.length; i++) {
+            if (ages[i] < 16) {
+                aux += 1;
+            }
+        }
+        double percent = (aux * 100)/ ages.length;
+        return percent;
+    }
+
+    public static double averageHeight(Double[] heights) {
+        double avaregeHeight = 0;
+        double sum = 0;
+        for (int i = 0; i < heights.length; i++) {
+            sum += heights[i];
+            avaregeHeight = sum / heights.length;
+        }
+        return avaregeHeight;
+    }
+
 }
