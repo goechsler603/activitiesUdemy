@@ -13,10 +13,10 @@ public class ArrayExercise4 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Integer rooms[] = new Integer[9];
+        Integer rooms[] = new Integer[10];
         Integer students = 11;
-        String studentName[] = new String[9];
-        String studentEmail[] = new String[9];
+        String studentName[] = new String[10];
+        String studentEmail[] = new String[10];
         Integer i;
 
 
